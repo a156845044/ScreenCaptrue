@@ -159,7 +159,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="bv-screen-capture.dll">
+    <Content Include="lib\bv-screen-capture.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="lib\32\PrScrnNew.dll" />
