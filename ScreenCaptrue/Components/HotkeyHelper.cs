@@ -28,10 +28,13 @@ namespace ScreenCaptrue
         /// <param name="callBack">回调函数</param> 
         public static void Regist(IntPtr hWnd, HotkeyModifiers fsModifiers, Keys vk, HotKeyCallBackHanlder callBack)
         {
+
             int id = keyid++;
             if (!RegisterHotKey(hWnd, id, fsModifiers, vk))
                 throw new Exception("regist hotkey fail.");
             keymap[id] = callBack;
+
+
         }
 
         /// <summary> 
@@ -41,11 +44,19 @@ namespace ScreenCaptrue
         /// <param name="callBack">回调函数</param> 
         public static void UnRegist(IntPtr hWnd, HotKeyCallBackHanlder callBack)
         {
-            foreach (KeyValuePair<int, HotKeyCallBackHanlder> var in keymap)
+            try
             {
-                if (var.Value == callBack)
-                    UnregisterHotKey(hWnd, var.Key);
+                foreach (KeyValuePair<int, HotKeyCallBackHanlder> var in keymap)
+                {
+                    if (var.Value == callBack)
+                        UnregisterHotKey(hWnd, var.Key);
+                }
             }
+            catch (Exception)
+            {
+
+            }
+
         }
 
         /// <summary> 
@@ -53,15 +64,24 @@ namespace ScreenCaptrue
         /// </summary> 
         public static void ProcessHotKey(System.Windows.Forms.Message m)
         {
-            if (m.Msg == WM_HOTKEY)
+            try
             {
-                int id = m.WParam.ToInt32();
-                HotKeyCallBackHanlder callback;
-                if (keymap.TryGetValue(id, out callback))
+                if (m.Msg == WM_HOTKEY)
                 {
-                    callback();
+                    int id = m.WParam.ToInt32();
+                    HotKeyCallBackHanlder callback;
+                    if (keymap.TryGetValue(id, out callback))
+                    {
+                        callback();
+                    }
                 }
             }
+            catch (Exception)
+            {
+
+
+            }
+
         }
 
         const int WM_HOTKEY = 0x312;
