@@ -163,7 +163,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="lib\32\PrScrnNew.dll" />
-    <Content Include="lib\64\PrScrnNew.dll">
+    <Content Include="lib\64\11\PrScrn.dll" />
+    <Content Include="lib\64\11\PrScrnNew.dll" />
+    <Content Include="lib\64\13\PrScrnNew.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="lib\32\PrScrn.dll">
