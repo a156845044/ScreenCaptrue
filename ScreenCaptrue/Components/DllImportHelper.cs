@@ -23,5 +23,12 @@ namespace ScreenCaptrue
         /// <returns></returns>
         [DllImport("PrScrnNew.dll", EntryPoint = "RunSnap")]
         public extern static int RunSnap();//与dll中一致   
+
+        /// <summary>
+        /// V2.0版本截图
+        /// </summary>
+        /// <returns></returns>
+        [DllImport("bv-screen-capture.dll", EntryPoint = "StartAudioCapture", CallingConvention = CallingConvention.StdCall)]
+        public extern static int StartAudioCapture();//与dll中一致   
     }
 }
