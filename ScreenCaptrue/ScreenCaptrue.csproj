@@ -162,6 +162,10 @@
     <Content Include="bv-screen-capture.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="lib\32\PrScrnNew.dll" />
+    <Content Include="lib\64\PrScrnNew.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="PrScrn.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
