@@ -64,7 +64,15 @@ namespace ScreenCaptrue
 
         void ScreenCapture()
         {
-            DllImportHelper.PrScrn();
+            try
+            {
+                DllImportHelper.PrScrn();
+            }
+            catch (Exception)
+            {
+
+            }
+           
         }
         protected override void WndProc(ref Message m)
         {

@@ -61,7 +61,13 @@ namespace ScreenCaptrue
 
         void ScreenCapture()
         {
-            DllImportHelper.RunSnap();
+            try
+            {
+                DllImportHelper.RunSnap();
+            }
+            catch (Exception ex)
+            {
+            }
         }
 
         void FromFroceClosee()
