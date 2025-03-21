@@ -1,5 +1,5 @@
 # ScreenCaptrue
-#实现原理
+# 实现原理
 
 通过调用c++库，实现触发截图功能。
 
@@ -25,6 +25,7 @@
 ### 基础版 Form1
 
 功能截图：
+
 ![主要功能截图](/images/screenshot_basic.png)
 
 拿到项目之后 Form1 必须再 x86 架构下编译，否则会报错。
