@@ -111,12 +111,12 @@ namespace ScreenCaptrue
                 MessageBox.Show("Alt + A 热键被占用");
                 try
                 {
-                    HotkeyHelper.Regist(this.Handle, HotkeyModifiers.MOD_CONTROL | HotkeyModifiers.MOD_SHIFT, Keys.A, ScreenCapture);
-                    button1.Text = "截图 (快捷键 Shit + Alt + A ) ";
+                    HotkeyHelper.Regist(this.Handle, HotkeyModifiers.MOD_CONTROL | HotkeyModifiers.MOD_ALT, Keys.A, ScreenCapture);
+                    button1.Text = "截图 (快捷键 CTRL + Alt + A ) ";
                 }
                 catch (Exception ex1)
                 {
-                    MessageBox.Show("Shit + Alt + A 热键被占用");
+                    MessageBox.Show("CTRL + Alt + A 热键被占用");
                 }
 
             }
